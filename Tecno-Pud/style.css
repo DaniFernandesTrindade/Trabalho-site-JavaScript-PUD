@@ -1,0 +1,729 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.5s;
+}
+
+/* Modos de Cores */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode .sidebar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .sidebar a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar a:hover {
+    background-color: #333;
+}
+
+body.dark-mode .product-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode button {
+    background-color: #6200ea;
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Menu Hambúrguer */
+.hamburger-menu {
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 101;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+/* Animação de Menu e Conteúdo */
+.main-content.pushed {
+    margin-left: 250px;
+}
+
+/* Botão de Modo Escuro */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.theme-toggle span {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Seções de Conteúdo */
+.hero-section,
+.about-section,
+.contact-section,
+.category-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Grids de Produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+}
+
+.product-card .details-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.product-card .details-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+/* Carrinho Flutuante */
+.cart-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+    z-index: 90;
+    text-decoration: none;
+}
+
+.cart-floating:hover {
+    background-color: #0056b3;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    line-height: 1;
+    display: none;
+}
+
+/* Estilos para a página de item */
+.item-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-details-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.item-details-content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.item-details-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.item-details-content .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.item-details-content p {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+}
+
+/* Estilos para o controle de quantidade e botão de adicionar ao carrinho */
+.quantity-add-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaçamento menor entre os elementos */
+    margin-top: 15px;
+    width: 100%;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1; /* Permite que o controle de quantidade ocupe sua parte do espaço */
+    height: 35px; /* Altura menor para o controle de quantidade */
+    min-width: 90px; /* Largura mínima para o controle de quantidade */
+    max-width: 120px; /* Largura máxima para o controle de quantidade */
+}
+
+.quantity-btn {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 0 8px; /* Padding menor */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem; /* Fonte menor */
+    color: #333;
+    transition: background-color 0.2s;
+    height: 100%; /* Ocupa a altura total do .quantity-control */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-btn:hover {
+    background-color: #e2e6ea;
+}
+
+.quantity-display {
+    font-size: 0.9rem; /* Fonte menor */
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 5px; /* Padding para o número */
+}
+
+.add-to-cart-btn {
+    flex: 1; /* Permite que o botão ocupe sua parte do espaço, ao lado do controle */
+    background-color: #ffc107; /* Tom de amarelo */
+    color: #212529; /* Cor do texto para contraste */
+    padding: 8px 12px; /* Padding menor */
+    border: none;
+    border-radius: 5px;
+    font-size: 0.85rem; /* Fonte menor para o botão */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    height: 35px; /* Mesma altura do controle de quantidade */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    text-overflow: ellipsis; /* Adiciona '...' se o texto for muito longo */
+    overflow: hidden; /* Esconde o texto que excede */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e0a800; /* Amarelo um pouco mais escuro ao passar o mouse */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+/* Estilos de quantidade na página de item (se aplicável) */
+.item-details-container .quantity-control {
+    justify-content: center;
+    width: auto; /* Permite que a largura se ajuste ao conteúdo, centralizando */
+    min-width: 120px;
+    max-width: 150px;
+    margin: 20px auto; /* Centraliza na página de detalhes do item */
+}
+
+.item-details-container .add-to-cart-btn {
+    width: 100%; /* O botão de detalhes preenche a largura na página do item */
+    max-width: 250px;
+    margin: 10px auto;
+}
+
+/* Adaptações para o modo escuro */
+body.dark-mode .quantity-btn {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .quantity-btn:hover {
+    background-color: #555;
+}
+
+body.dark-mode .quantity-control {
+    border: 1px solid #444;
+}
+
+body.dark-mode .add-to-cart-btn {
+    background-color: #ffc107; /* Mantém a cor amarela no modo escuro */
+    color: #212529;
+}
+
+body.dark-mode .add-to-cart-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Estilos para a página de checkout */
+.checkout-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .checkout-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .checkout-container h2,
+body.dark-mode .checkout-form h3,
+body.dark-mode .checkout-summary h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .checkout-form label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .checkout-form input[type="text"],
+body.dark-mode .checkout-form input[type="email"],
+body.dark-mode .checkout-form input[type="tel"],
+body.dark-mode .checkout-form select {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .checkout-summary {
+    background-color: #2b2b2b;
+}
+
+body.dark-mode .cart-summary-item p {
+    color: #aaa;
+}
+
+
+.checkout-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.checkout-content {
+    display: flex;
+    gap: 40px;
+}
+
+.checkout-form {
+    flex: 2;
+}
+
+.checkout-form h3 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.checkout-form #consultar-cep-btn {
+    padding: 10px;
+    margin-left: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkout-form .payment-options {
+    margin-top: 15px;
+}
+
+.checkout-form .payment-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.checkout-form img {
+    max-width: 200px;
+}
+
+.checkout-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.checkout-form #confirmar-pedido-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-summary {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.checkout-summary h3 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cart-summary-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.cart-summary-item img {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.cart-summary-item .item-info {
+    flex: 1;
+}
+
+.cart-summary-item h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cart-summary-item p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.cart-summary-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-total {
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-details-container {
+        flex-direction: column;
+    }
+    
+    .checkout-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .quantity-add-container {
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+        justify-content: center;
+    }
+
+    .quantity-control,
+    .add-to-cart-btn {
+        flex-basis: 100%; /* Ocupa a largura total em telas pequenas */
+        max-width: 100%; /* Garante que não ultrapasse 100% */
+        margin-bottom: 10px; /* Adiciona espaçamento entre eles */
+    }
+    /* Ajustes para botões e display no controle de quantidade em mobile */
+    .quantity-control {
+        height: 40px; /* Um pouco maior em mobile para facilitar o toque */
+    }
+    .quantity-btn {
+        padding: 0 12px;
+        font-size: 1.1rem;
+    }
+    .quantity-display {
+        font-size: 1.1rem;
+    }
+    .add-to-cart-btn {
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+/* Estilos para o banner e containers */
+.banner-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+body.dark-mode .section-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.contact-info {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.map-container {
+    margin-top: 30px;
+}
+
+.map-container iframe {
+    border-radius: 8px;
+}
