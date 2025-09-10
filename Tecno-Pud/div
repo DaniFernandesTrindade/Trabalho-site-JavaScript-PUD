@@ -1,0 +1,12 @@
+a div
+
+<div class="pizza-card">
+      <img src="img/pizza-korok.jpg" alt="Pizza Korok Garden">
+      <h3>Korok Garden</h3>
+      <p>R$ 39,90</p>
+      <p>Pizza vegetariana com cogumelos, pimentões, tomate cereja e rúcula.
+    Os Koroks são pequenos espíritos da floresta que aparecem em jogos 
+    como Breath of the Wild e Wind Waker. A mistura de vegetais frescos lembra 
+   o estilo de vida natural e verde deles.</p>
+      <button onclick="adicionarAoCarrinho('Korok Garden', 39.90)">Adicionar ao carrinho</button>
+    </div>
