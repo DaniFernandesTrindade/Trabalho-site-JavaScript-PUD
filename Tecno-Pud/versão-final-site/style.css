@@ -350,7 +350,7 @@ footer {
 .quantity-add-container {
     display: flex;
     align-items: center;
-    gap: 8px; /* Espaçamento menor entre os elementos */
+    gap: 8px;
     margin-top: 15px;
     width: 100%;
 }
@@ -360,22 +360,22 @@ footer {
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 4px;
-    flex: 1; /* Permite que o controle de quantidade ocupe sua parte do espaço */
-    height: 35px; /* Altura menor para o controle de quantidade */
-    min-width: 90px; /* Largura mínima para o controle de quantidade */
-    max-width: 120px; /* Largura máxima para o controle de quantidade */
+    flex: 1;
+    height: 35px;
+    min-width: 90px;
+    max-width: 120px;
 }
 
 .quantity-btn {
     background-color: #f8f9fa;
     border: none;
-    padding: 0 8px; /* Padding menor */
+    padding: 0 8px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 0.9rem; /* Fonte menor */
+    font-size: 0.9rem;
     color: #333;
     transition: background-color 0.2s;
-    height: 100%; /* Ocupa a altura total do .quantity-control */
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -386,48 +386,47 @@ footer {
 }
 
 .quantity-display {
-    font-size: 0.9rem; /* Fonte menor */
+    font-size: 0.9rem;
     flex-grow: 1;
     text-align: center;
-    padding: 0 5px; /* Padding para o número */
+    padding: 0 5px;
 }
 
 .add-to-cart-btn {
-    flex: 1; /* Permite que o botão ocupe sua parte do espaço, ao lado do controle */
-    background-color: #ffc107; /* Tom de amarelo */
-    color: #212529; /* Cor do texto para contraste */
-    padding: 8px 12px; /* Padding menor */
+    flex: 1;
+    background-color: #ffc107;
+    color: #212529;
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
-    font-size: 0.85rem; /* Fonte menor para o botão */
+    font-size: 0.85rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    height: 35px; /* Mesma altura do controle de quantidade */
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-    text-overflow: ellipsis; /* Adiciona '...' se o texto for muito longo */
-    overflow: hidden; /* Esconde o texto que excede */
+    height: 35px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .add-to-cart-btn:hover {
-    background-color: #e0a800; /* Amarelo um pouco mais escuro ao passar o mouse */
-    transform: translateY(-1px); /* Pequeno efeito de elevação */
+    background-color: #e0a800;
+    transform: translateY(-1px);
 }
 
-/* Estilos de quantidade na página de item (se aplicável) */
 .item-details-container .quantity-control {
     justify-content: center;
-    width: auto; /* Permite que a largura se ajuste ao conteúdo, centralizando */
+    width: auto;
     min-width: 120px;
     max-width: 150px;
-    margin: 20px auto; /* Centraliza na página de detalhes do item */
+    margin: 20px auto;
 }
 
 .item-details-container .add-to-cart-btn {
-    width: 100%; /* O botão de detalhes preenche a largura na página do item */
+    width: 100%;
     max-width: 250px;
     margin: 10px auto;
 }
@@ -447,7 +446,7 @@ body.dark-mode .quantity-control {
 }
 
 body.dark-mode .add-to-cart-btn {
-    background-color: #ffc107; /* Mantém a cor amarela no modo escuro */
+    background-color: #ffc107;
     color: #212529;
 }
 
@@ -657,32 +656,36 @@ body.dark-mode .cart-summary-item p {
     }
 
     .quantity-add-container {
-        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .quantity-control,
     .add-to-cart-btn {
-        flex-basis: 100%; /* Ocupa a largura total em telas pequenas */
-        max-width: 100%; /* Garante que não ultrapasse 100% */
-        margin-bottom: 10px; /* Adiciona espaçamento entre eles */
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
     }
-    /* Ajustes para botões e display no controle de quantidade em mobile */
+    
     .quantity-control {
-        height: 40px; /* Um pouco maior em mobile para facilitar o toque */
+        height: 40px;
     }
+    
     .quantity-btn {
         padding: 0 12px;
         font-size: 1.1rem;
     }
+    
     .quantity-display {
         font-size: 1.1rem;
     }
+    
     .add-to-cart-btn {
         height: 40px;
         font-size: 1rem;
     }
 }
+
 /* Estilos para o banner e containers */
 .banner-container {
     width: 100%;
