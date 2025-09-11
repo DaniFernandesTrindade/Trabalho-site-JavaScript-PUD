@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1" />
+ <title>Descrição do Produto - TecnoPUD LINK</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="estilo02.css" />
+</head>
+<body>
+ 
+ <header class="site-header">
+     <div class="brand"><span class="logo-accent">Tecno</span>PUD <span class="link">LINK</span></div>
+    <a href="index.html" class="btn-ghost">🏠 Home</a>
+ <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+  </header>
+
+  <aside class="mobile-sidebar">
+  <a href="#" class="close-btn"><i class="fas fa-times"></i></a>
+ <nav>
+    <ul>
+    <li><a href="#">Produtos</a></li>
+     <li><a href="#">Categorias</a></li>
+     <li><a href="#">Sobre Nós</a></li>
+    <li><a href="#">Ajuda</a></li>
+    <li><a href="#" onclick="toggleTheme()"><span id="themeToggleText">Modo Escuro</span></a></li>
+     </ul>
+     </nav>
+    </aside>
+ 
+    <main class="item-details-main">
+    <section class="item-details-container">
+     <img src="https://via.placeholder.com/400" alt="Produto Exemplo" id="productImage" />
+
+     <div class="item-details-content">
+         <h1 id="productTitle">MoBo</h1>
+     <p class="price">R$ <span id="itemPrice">999,90</span></p>
+     </div>
+
+     <p class="description-text">
+        Eleve seus jogos com a série MPG! Experimente uma imersão completa com controle avançado de iluminação RGB e uma faixa de LED
+         frontal que te mantém informado em tempo real. Personalize seu setup do seu jeito e domine as partidas com estilo.
+     </p>
+    <div class="quantity-add-container">
+    <div class="quantity-control">
+      <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <span id="quantityDisplay" class="quantity-display">1</span>
+              <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+    </div>
+      <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho</button>
+
+     </section>
+     </main>
+
+      <main class="item-details-main">
+    <section class="item-details-container">
+     <img src="https://via.placeholder.com/400" alt="Produto Exemplo" id="productImage" />
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Cpu</h1>
+     <p class="price">R$ <span id="itemPrice">1.056,00</span></p>
+     </div>
+
+     <p class="description-text">
+         Alta performance com o Optiplex 7010 - CPU potente para o dia a dia
+    Chega de lentidão. Com processador Intel Core i5 de 3ª geração, 8GB de memória RAM e HD de 500GB, você terá velocidade e e
+ Ideal para trabalho, estudo e entretenimento. 
+ Design compacto que cabe em qualquer espaço. 
+ Não perca mais tempo, adquira já o seu dell optiplex 7010 e sinta a diferença!
+     </p>
+    <div class="quantity-add-container">
+    <div class="quantity-control">
+      <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <span id="quantityDisplay" class="quantity-display">1</span>
+              <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+    </div>
+      <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho</button>
+
+     </section>
+     </main>
+
+      <main class="item-details-main">
+    <section class="item-details-container">
+     <img src="https://via.placeholder.com/400" alt="Produto Exemplo" id="productImage" />
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Cabo hdmi</h1>
+     <p class="price">R$ <span id="itemPrice">14,99</span></p>
+     </div>
+
+     <p class="description-text">
+Esse cabo dispõe de compatibilidade com gama ampliada de cor, um dos recursos mais recentes para a melhoria da qualidade da imagem
+     </p>
+    <div class="quantity-add-container">
+    <div class="quantity-control">
+      <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <span id="quantityDisplay" class="quantity-display">1</span>
+              <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+    </div>
+      <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho</button>
+
+     </section>
+     </main>
+    
+      <main class="item-details-main">
+    <section class="item-details-container">
+     <img src="https://via.placeholder.com/400" alt="Produto Exemplo" id="productImage" />
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Gpu</h1>
+     <p class="price">R$ <span id="itemPrice">3.330,00</span></p>
+     </div>
+
+     <p class="description-text">
+Placa de vídeo 8gb gddr é a solução perfeita para quem busca alto desempenho gráfico com design funcional e moderno. Baseada na renomada arquitetura nvidia ada lovelace, essa gpu oferece recursos avançados como ray tracing em tempo real, inteligência artificial para otimização de gráficos e compatibilidade com dlss 3.5, proporcionando uma experiência de jogo fluida e imersiva. refrigeração eficiente: o sistema twin x2 conta com duas ventoinhas de alto desempenho, que mantêm a placa em temperaturas ideais, mesmo sob carga pesada em sessões prolongadas de jogos ou trabalhos criativos exigentes como edição de vídeos e modelagem 3d. Memória de alto desempenho: com 8gb de memória gddr, ela entrega largura de banda impressionante para multitarefas, resoluções elevadas e gráficos detalhados, ideal para gamers e criadores. Design compacto e robusto: seu visual clean e construção sólida combinam com diferentes estilos de gabinete, facilitando a montagem e a compatibilidade com setups variados. Conectividade moderna: saídas hdmi e displayport de última geração permitem o uso de monitores de alta taxa de atualização e resolução, ideal para quem busca imagens nítidas e responsivas.
+     </p>
+    <div class="quantity-add-container">
+    <div class="quantity-control">
+      <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <span id="quantityDisplay" class="quantity-display">1</span>
+              <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+    </div>
+      <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho</button>
+
+     </section>
+     </main>
+
+      <main class="item-details-main">
+    <section class="item-details-container">
+     <img src="https://via.placeholder.com/400" alt="Produto Exemplo" id="productImage" />
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Fonte Bronze</h1>
+     <p class="price">R$ <span id="itemPrice">499,99</span></p>
+     </div>
+
+     <p class="description-text">
+As fontes de alimentação têm a certificação 80 PLUS Bronze, fornecendo até 88% de eficiência operacional para garantir
+menos calor e um menor consumo de energia. Sua alimentação completa e contínua garante um desempenho consistente, enquanto
+uma ventoinha de 120mm de baixo ruído com controle térmico assegura uma operação silenciosa. A fonte cabe na maioria dos
+gabinetes de PC modernos com seu comprimento compacto de 125mm, com cabos de revestimento preto e uma estrutura em
+pintura a pó preta para combinar com o estilo do seu PC. Desfrute de uma confiança total na sua compra com uma garantia de cinco
+anos e o apoio da equipe técnica global, garantindo uma alimentação de energia confiável para seu sistema, com eficiência
+operacional, gerando menos calor e reduzindo o consumo de energia.
+        </p>
+   <div class="quantity-add-container">
+    <div class="quantity-control">
+      <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <span id="quantityDisplay" class="quantity-display">1</span>
+              <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+    </div>
+      <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho</button>
+
+     </section>
+     </main>
+
+      <main class="item-details-main">
+    <section class="item-details-container">
+     <img src="https://via.placeholder.com/400" alt="Produto Exemplo" id="productImage" />
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Cooler Para Cpu</h1>
+     <p class="price">R$ <span id="itemPrice">199,99</span></p>
+     </div>
+
+     <p class="description-text">
+Cooler para cpu cooler nano, amd, intel, 1 fan, preto, rr-h410-25pk-r1
+o cooler nano oferece um conjunto de recursos excepcionais para complementar o desempenho de ponta já consagrado.
+Possui 4 heat pipes com tecnologia de contato direto garantem uma transferência de calor mais eficiente do cpu para o cooler, 
+melhorando o desempenho de resfriamento. A montagem fácil da ventoinha simplifica o processo de instalação, permitindo
+que os usuários fixem e removam a ventoinha rapidamente, tornando a manutenção e os upgrades muito mais práticos.
+A montagem aprimorada garante compatibilidade com os mais recentes soquetes de cpu da amd e intel.
+A estética totalmente preta confere um visual elegante e moderno, tornando-o a escolha perfeita para configurações com design minimalista e discreto.
+     </p>
+    <div class="quantity-add-container">
+    <div class="quantity-control">
+      <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <span id="quantityDisplay" class="quantity-display">1</span>
+              <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+    </div>
+      <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho</button>
+
+     </section>
+     </main>
+
+      <main class="item-details-main">
+    <section class="item-details-container">
+     <img src="https://via.placeholder.com/400" alt="Produto Exemplo" id="productImage" />
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Gabinete MaTa</h1>
+     <p class="price">R$ <span id="itemPrice">249,99</span></p>
+     </div>
+
+     <p class="description-text">
+eleve seu setup com o gabinete gamer aquario apex black, um modelo mid-tower matx que combina design sofisticado e desempenho
+térmico para atender às necessidades dos gamers mais exigentes. Com acabamento premium em preto e iluminação rgb impactante, ele
+é a escolha ideal para um setup moderno e eficiente, design em vidro temperado: lateral e frontal em vidro temperado oferecem uma visão
+clara dos componentes internos e criam um visual de destaque para a iluminação rgb, elegante: equipado com 3 fans rgb de 120mm 
+pré-instalados, oferece efeitos de luz dinâmicos que transformam sua estação de jogo em um espetáculo visual, compatibilidade 
+compacta e versátil: desenvolvido para placas-mãe matx e mini-itx, o design compacto maximiza o espaço disponível sem comprometer
+o desempenho, organização inteligente: sistema de gestão de cabos interno proporciona um visual limpo e melhora o fluxo de ar.
+     </p>
+    <div class="quantity-add-container">
+    <div class="quantity-control">
+      <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+          <span id="quantityDisplay" class="quantity-display">1</span>
+              <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+    </div>
+      <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho</button>
+
+     </section>
+     </main>
+
+    <a href="checkout.html" class="cart-floating">
+     <i class="fas fa-shopping-cart"></i>
+ <span class="cart-counter" id="cartCounter">0</span>
+     </a>
+
+     <footer class="site-footer">
+ <div class="footer-grid"></div>
+     <div class="copyright">TECNOPUD SINCE 2025</div>
+ </footer>
+
+    <script>
+    // Variáveis e funções para o carrinho
+    const getCart = () => JSON.parse(localStorage.getItem("cart")) || {};
+    const saveCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
+    
+    function renderCartCounter() {
+        const cart = getCart();
+        const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+        const cartCounter = document.getElementById("cartCounter");
+        cartCounter.textContent = totalItems;
+        cartCounter.style.display = totalItems > 0 ? 'block' : 'none';
+    }
+
+    // Lógica da página de descrição
+    let currentQuantity = 1;
+    const quantityDisplay = document.getElementById("quantityDisplay");
+    
+    function updateQuantity(change) {
+        currentQuantity += change;
+        if (currentQuantity < 1) {
+            currentQuantity = 1;
+        }
+        quantityDisplay.textContent = currentQuantity;
+    }
+    
+    function addToCart() {
+        const productId = "produto-incrivel";
+        const productName = document.getElementById("productTitle").textContent;
+        const productPrice = parseFloat(document.getElementById("itemPrice").textContent);
+        const productImg = document.getElementById("productImage").src;
+        
+        const cart = getCart();
+        
+        if (cart[productId]) {
+            cart[productId].quantity += currentQuantity;
+        } else {
+            cart[productId] = {
+                name: productName,
+                price: productPrice,
+                quantity: currentQuantity,
+                image: productImg
+            };
+        }
+        
+        saveCart(cart);
+        renderCartCounter();
+        
+        alert(`Adicionado ${currentQuantity}x de "${productName}" ao carrinho!`);
+        
+        // Reseta a quantidade para 1 após adicionar ao carrinho
+        currentQuantity = 1;
+        quantityDisplay.textContent = currentQuantity;
+    }
+    
+    // Funções de Menu e Tema
+    const mobileSidebar = document.querySelector('.mobile-sidebar');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const closeBtn = document.querySelector('.close-btn');
+
+    menuToggle.addEventListener('click', () => {
+        mobileSidebar.classList.add('is-open');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        mobileSidebar.classList.remove('is-open');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!mobileSidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            mobileSidebar.classList.remove('is-open');
+        }
+    });
+
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        document.getElementById('themeToggleText').textContent = isDarkMode ? 'Modo Claro' : 'Modo Escuro';
+    }
+
+    // Inicialização
+    renderCartCounter();
+    </script>
+
+</body>
+</html>
