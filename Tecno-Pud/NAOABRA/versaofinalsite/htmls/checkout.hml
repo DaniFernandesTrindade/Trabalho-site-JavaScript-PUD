@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+ <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+   <header class="site-header">
+    <a href="index.html" class="logo-link">
+         <img src="maisUm.jpeg" alt="Logo da loja TecnoPUD" class="logo-image">
+   </a>
+</header>
+ </header>
+
+  <aside class="mobile-sidebar">
+     <a href="#" class="close-btn"><i class="fas fa-times"></i></a>
+  <nav>
+    <ul>
+     <li><a href="#">Produtos</a></li>
+         <li><a href="#">Categorias</a></li>
+     <li><a href="#">Sobre Nós</a></li>
+         <li><a href="#">Ajuda</a></li>
+     </ul>
+ </nav>
+ </aside>
+
+ <main class="checkout-main">
+  <section class="cart-section">
+    <h2>Seu Carrinho</h2>
+         <div id="cartItems"></div>
+        <div class="cart-summary">
+     <strong>Total: R$ <span id="cartTotal">0.00</span></strong>
+     </div>
+     </section>
+
+     <section class="form-section">
+     <h2>Dados do Cliente</h2>
+     <form id="checkoutForm">
+         <label>Nome completo<input name="name" required /></label>
+         <label>Email<input name="email" type="email" required /></label>
+         <label>Telefone<input name="phone" required /></label>
+         <label>Endereço<textarea name="address" rows="2" required></textarea></label>
+
+     <h3>Forma de Pagamento</h3>
+         <label><input type="radio" name="pay" value="pix" required /> PIX</label>
+         <label><input type="radio" name="pay" value="cartao" /> Cartão</label>
+
+    <div id="pixBox" class="pay-box" hidden>
+        <p>Escaneie o QR Code para pagar:</p>
+         <img src="imagens/qrcode-pix.png" alt="QR Code PIX" class="qrcode"/>
+     </div>
+
+     <div id="cardBox" class="pay-box" hidden>
+         <label>Número do Cartão<input name="card" required /></label>
+         <label>Validade<input name="validade" placeholder="MM/AA" required /></label>
+         <label>CVV<input name="cvv" required /></label>
+         <label>Parcelamento
+             <select name="parcelas">
+                 <option>À vista</option>
+                 <option>2x sem juros</option>
+                 <option>3x sem juros</option>
+                <option>6x</option>
+                </select>
+        </label>
+     </div>
+
+     <button type="submit" class="btn-gold">Finalizar Compra</button>
+      </form>
+         <div id="orderSuccess" class="order-success" hidden>
+        <h3>Compra finalizada!</h3>
+         <p>Obrigado — seus dados foram recebidos.</p>
+     </div>
+    </section>
+  </main>
+
+  <section class="contact-map-section">
+    <div class="map-container">
+       <h4>Mapa</h4>
+        <div class="map-wrap">
+         <iframe src="https://www.google.com/maps?q=Niterói+RJ&output=embed" title="Localização da loja"></iframe>
+        </div>
+    </div>
+ 
+      <div class="contact-container">
+       <h4>Contato</h4>
+       <p><strong>Telefone:</strong> (27) 99232-5004</p>
+        <p><strong>E-mail:</strong> contato@tecnopud.com</p>
+        <p><strong>CNPJ:</strong> 00.808.102/0001-38</p>
+  </div>
+  </section>
+
+ <footer class="site-footer">
+     <div class="footer-grid">
+     </div>
+   <div class="copyright">© 2025 TecnoPUD LINK. Todos os direitos reservados.</div>
+  </footer>
+
+  <script>
+    // Funções para manipular o carrinho
+    const getCart = () => JSON.parse(localStorage.getItem("cart")) || {};
+    const saveCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
+
+    function renderCart() {
+        const cart = getCart();
+        const div = document.getElementById("cartItems");
+        div.innerHTML = "";
+        let total = 0;
+
+        const cartItems = Object.values(cart); // Pega os valores do objeto do carrinho
+
+        if (cartItems.length === 0) {
+            div.innerHTML = "<p>Seu carrinho está vazio.</p>";
+        } else {
+            cartItems.forEach(item => {
+                const itemTotal = item.quantity * item.price;
+                div.innerHTML += `<p>${item.name} (x${item.quantity}) - R$ ${itemTotal.toFixed(2)}</p>`;
+                total += itemTotal;
+            });
+        }
+        document.getElementById("cartTotal").textContent = total.toFixed(2);
+    }
+    
+    // Renderiza o carrinho ao carregar a página
+    renderCart();
+
+    // Lógica do formulário e dos botões
+    const radios = document.querySelectorAll("input[name=pay]");
+    radios.forEach(r => r.addEventListener("change", () => {
+        document.getElementById("pixBox").hidden = r.value !== "pix";
+        document.getElementById("cardBox").hidden = r.value !== "cartao";
+    }));
+
+    document.getElementById("checkoutForm").onsubmit = e => {
+        e.preventDefault();
+        document.getElementById("orderSuccess").hidden = false;
+        document.getElementById("orderSuccess").scrollIntoView({ behavior: 'smooth' });
+
+        // Limpar o carrinho após 3 segundos
+        setTimeout(() => {
+            const cart = {}; // Limpa o carrinho como um objeto vazio
+            saveCart(cart);
+            renderCart();
+            document.getElementById("orderSuccess").hidden = true;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 3000); // 3 segundos
+    };
+
+    // Funções para o menu hambúrguer
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.mobile-sidebar');
+    const closeBtn = document.querySelector('.close-btn');
+
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.add('is-open');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('is-open');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove('is-open');
+        }
+    });
+
+    </script>
+</body>
+</html>
