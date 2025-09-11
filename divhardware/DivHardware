@@ -1,0 +1,30 @@
+<div class="item-details-content">
+         <h1 id="productTitle">Memoria Ram</h1>
+     <p class="price">R$ <span id="itemPrice">350.00</span></p>
+     </div>
+
+     <p class="description-text">
+         Memoria Ram,16GB (1x16GB), DDR4, 3200MHz
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">SSD</h1>
+     <p class="price">R$ <span id="itemPrice">320.00</span></p>
+     </div>
+
+     <p class="description-text">
+         SSD 512GB, M.2 2280, PCIe NVMe,  Leitura 6000MB/s, Gravacao 3000MB/s
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Cabo Sata</h1>
+     <p class="price">R$ <span id="itemPrice">18.00</span></p>
+     </div>
+
+     <p class="description-text">
+         Cabo Sata 6GB/s, Para HD, SSD, Gravador, Drives.
+     </p>
+     </div>
