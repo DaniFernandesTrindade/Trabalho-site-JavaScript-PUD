@@ -28,3 +28,112 @@
          Cabo Sata 6GB/s, Para HD, SSD, Gravador, Drives.
      </p>
      </div>
+
+<div class="item-details-content">
+         <h1 id="productTitle">Teclado Mecânico</h1>
+     <p class="price">R$ <span id="itemPrice">450,00</span></p>
+     </div>
+
+     <p class="description-text">
+         Teclado mecânico de alta precisão para gamers e programadores.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Mouse Gamer</h1>
+     <p class="price">R$ <span id="itemPrice">250.00</span></p>
+     </div>
+
+     <p class="description-text">
+         Mouse com sensor óptico de alta precisão.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Mousepad Gamer</h1>
+     <p class="price">R$ <span id="itemPrice">80,00</span></p>
+     </div>
+
+     <p class="description-text">
+         Mousepad de tecido, grande e com bordas costuradas.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Webcam HD</h1>
+     <p class="price">R$ <span id="itemPrice">120,00</span></p>
+     </div>
+
+     <p class="description-text">
+         Webcam com resolução 1080p e microfone embutido.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Headset Gamer</h1>
+     <p class="price">R$ <span id="itemPrice">350,00</span></p>
+     </div>
+
+     <p class="description-text">
+         Headset com som surround e microfone removível.
+     </p>
+     </div>
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Microfone Condensador</h1>
+     <p class="price">R$ <span id="itemPrice">280.00</span></p>
+     </div>
+
+
+     <p class="description-text">
+        Microfone de estúdio para gravações de alta qualidade.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Cadeira Gamer</h1>
+     <p class="price">R$ <span id="itemPrice">950.00</span></p>
+     </div>
+
+     <p class="description-text">
+         Cadeira ergonômica com ajustes de altura e inclinação.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Kit Teclado e Mouse</h1>
+     <p class="price">R$ <span id="itemPrice">180.00</span></p>
+     </div>
+
+     <p class="description-text">
+        Kit sem fio com teclado e mouse para uso diário.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">ub USB</h1>
+     <p class="price">R$ <span id="itemPrice">50.00</span></p>
+     </div>
+
+     <p class="description-text">
+         Hub USB com 4 portas de alta velocidade.
+     </p>
+     </div>
+
+
+     <div class="item-details-content">
+         <h1 id="productTitle">Base Refrigeradora</h1>
+     <p class="price">R$ <span id="itemPrice">110.00</span></p>
+     </div>
+
+     <p class="description-text">
+         Base para notebook com ventoinhas para resfriamento.
+     </p>
+     </div>
