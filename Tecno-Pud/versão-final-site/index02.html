@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoPUD SINCE 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="brand"><span class="logo-accent">Tecno</span>PUD <span class="link"></span></div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="portateis.html">Portateis</a></li>
+                <li><a href="perifericos.html">Periféricos</a></li>
+                <li><a href="audio.html">Áudio</a></li>
+                <li><a href="pc-gamer.html">PC Gamer</a></li>
+                <li><a href="acessorios.html">Acessórios</a></li>
+                <li><a href="monitores.html">Monitores</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <span>Modo Escuro</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="banner-container">
+            <img src="https://via.placeholder.com/1500x400" alt="Banner de Destaque">
+        </section>
+
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Bem-vindo à TECNOPUD SINCE 2025</h1>
+                <p>Seu portal de tecnologia, hardware e performance!</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="section-container">
+                <h2>Sobre a TECNOPUD SINCE 2025</h2>
+                <p>Somos uma empresa apaixonada por tecnologia, dedicada a oferecer os melhores produtos para trabalho, estudo e lazer. 
+                  Nossa missão é proporcionar uma experiência de compra incrível, com produtos de alta qualidade e um atendimento excepcional. Desde 2025, estamos no mercado trazendo inovação e as últimas tendências do universo da tecnologia para você.</p>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="section-container">
+                <h2>Contato</h2>
+                <div class="contact-info">
+                    <p><strong>Telefone:</strong> (99) 99999-9999</p>
+                    <p><strong>E-mail:</strong> contato@tecnopud.com</p>
+                    <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.292601728286!2d-43.12519548486955!3d-22.905664185012546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x998e3b4d0d8293%3A0x6a0f7e15e80d46f3!2sNiter%C3%B3i%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1632731210813!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="checkout.html" class="cart-floating">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-counter" class="cart-counter">0</span>
+    </a>
+
+    <footer>
+        <p>© 2025 TecnoPUD LINK. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        const getCart = () => JSON.parse(localStorage.getItem('cart')) || {};
+
+        const updateCartCounter = () => {
+            const cart = getCart();
+            const counterElement = document.getElementById('cart-counter');
+            const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+            
+            counterElement.textContent = totalItems;
+            counterElement.style.display = totalItems > 0 ? 'flex' : 'none';
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger-menu');
+            const sidebar = document.getElementById('sidebar');
+            const themeSwitch = document.getElementById('theme-switch');
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeSwitch.checked = true;
+            }
+
+            hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+            themeSwitch.addEventListener('change', () => {
+                if (themeSwitch.checked) {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            updateCartCounter();
+        });
+    </script>
+</body>
+</html>
