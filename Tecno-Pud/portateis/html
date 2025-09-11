@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoPUD SINCE 2025 - Periféricos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">TECNOPUD SINCE 2025</a>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="notebooks.html">Notebooks</a></li>
+                <li><a href="perifericos.html">Periféricos</a></li>
+                <li><a href="audio.html">Áudio</a></li>
+                <li><a href="pc-gamer.html">PC Gamer</a></li>
+                <li><a href="acessorios.html">Acessórios</a></li>
+                <li><a href="monitores.html">Monitores</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <span>Modo Escuro</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="category-section">
+            <h1>Periféricos</h1>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <img src="img/CelularCLTA1.png" alt="Celular CLT">
+                    <h3>Celular CLTA</h3>
+                    <p class="price">R$ 1.299,90</p>
+                    <p>Smartphone compacto, ideal para o dia a dia</p>
+                    <button onclick="adicionarAoCarrinho('CelularCLTA1', 'Celular CLT', 1.299 )">Adicionar ao carrinho</button>
+                    <a href="item.html?id=Celular CLT" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="img/CelularPjA1.png" alt="Celular PJ">
+                    <h3>Celular Pj</h3>
+                    <p class="price">R$ 999,90</p>
+                    <p>Smartphone moderno com tela ampla e ótimo desempenho</p>
+                    <button onclick="adicionarAoCarrinho('CelularPjA1', 'Celular PJ', 999.00)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=CelularPjA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/FoneBTSlimA1.png" alt="Fone Fone BT Slim">
+                    <h3>Fone BT Slim</h3>
+                    <p class="price">R$ 199,90</p>
+                    <p>Fone de ouvido Bluetooth</p>
+                    <button onclick="adicionarAoCarrinho('FoneBTSlimA1', 'FoneBT Slim', 199.90)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=FoneBTSlimA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/NotebookMetaA1.png" alt="Notebook Meta A">
+                    <h3>Notebook Meta A </h3>
+                    <p class="price">R$ 29,00</p>
+                    <p>Notebook moderno,com sistema avançado</p>
+                    <button onclick="adicionarAoCarrinho('NotebookMetaA1', 'Notebook Meta', 29.00)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=NotebookMetaA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/Notebook10gA1.png" alt="Notebook 10g">
+                    <h3>Notebook 11110G</h3>
+                    <p class="price">R$ 2.499,90</p>
+                    <p>Notebook rápido, ideal para estudos e trabalho.</p>
+                    <button onclick="adicionarAoCarrinho('Notebook10gA1', 'Notebook 10g ', 2.499)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=Notebook10gA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/NotebookMaxA1.png" alt="Notebook Max">
+                    <h3>Notebook Max</h3>
+                    <p class="price">R$ 3.199,90</p>
+                    <p>Notebook de alto desempenho para multitarefas.</p>
+                    <button onclick="adicionarAoCarrinho('NotebookMaxA1', 'Notebook Max', 3.199)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=NotebookMaxA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/PowerBankA1.png" alt="Teclado Mecânico">
+                    <h3>Power Bank </h3>
+                    <p class="price">R$ 149,00</p>
+                    <p>Carregador portátil para manter seus dispositivos sempre ativos.</p>
+                    <button onclick="adicionarAoCarrinho('PowerBankA1', 'Power Bank', 149.00)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=PowerBankA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/SomBTA1.png" alt="Teclado Mecânico">
+                    <h3>Som BTA </h3>
+                    <p class="price">R$ 450,00</p>
+                    <p>Caixa de som Bluetooth portátil com som potente.</p>
+                    <button onclick="adicionarAoCarrinho('PowerBankA1', 'Power Bank', 450.00)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=PowerBankA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/SomBTMiniA1.png" alt="Teclado Mecânico">
+                    <h3>Som BT Mini</h3>
+                    <p class="price">R$ 340,00</p>
+                    <p>Caixa de som compacta, ideal para acompanhar em qualquer lugar.</p>
+                    <button onclick="adicionarAoCarrinho('SomBTMiniA1', 'Som BT Mini', 340.00)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=SomBTMiniA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="img/TabletConcA1.png" alt="Teclado Mecânico">
+                    <h3>Tablet CONC</h3>
+                    <p class="price">R$ 1.299,00</p>
+                    <p>Tablet rapido e leve.</p>
+                    <button onclick="adicionarAoCarrinho('TabletConcA1', 'Tablet Conc', 1.299)">Adicionar ao carrinho</button>
+                    <a href="item.html?id=TabletConcA1" class="details-btn" target="_blank">Ver detalhes</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <a href="checkout.html" class="cart-floating">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-counter" class="cart-counter">0</span>
+    </a>
+
+    <footer>
+        <p>TECNOPUD SINCE 2025</p>
+    </footer>
+
+    <script>
+        const PRODUCTS = {
+            'perifericos': [
+                { id: 'peri-1', name: 'Teclado Mecânico', price: 450.00, image: 'img/peri1.jpg', description: 'Teclado mecânico de alta precisão para gamers e programadores.', fullDescription: 'Teclado com switches azuis, iluminação RGB personalizável, e design ergonômico. Resposta tátil e sonora ideal para digitação e jogos. Construção robusta e durável.' },
+                { id: 'peri-2', name: 'Mouse Gamer', price: 250.00, image: 'img/peri2.jpg', description: 'Mouse com sensor óptico de alta precisão.', fullDescription: 'Mouse com sensor óptico de alta precisão, iluminação RGB, botões programáveis e design ergonômico. Ideal para sessões de jogo longas e intensas.' },
+                { id: 'peri-3', name: 'Mousepad Gamer', price: 80.00, image: 'img/peri3.jpg', description: 'Mousepad de tecido, grande e com bordas costuradas.', fullDescription: 'Mousepad de tecido com superfície otimizada para sensores ópticos e a laser. Grande o suficiente para movimentos amplos, com bordas costuradas que previnem o desgaste.' },
+                { id: 'peri-4', name: 'Webcam HD', price: 120.00, image: 'img/peri4.jpg', description: 'Webcam com resolução 1080p e microfone embutido.', fullDescription: 'Webcam com resolução Full HD (1080p), ideal para videochamadas e streaming. Possui foco automático e microfone embutido com cancelamento de ruído.' },
+                { id: 'peri-5', name: 'Headset Gamer', price: 350.00, image: 'img/peri5.jpg', description: 'Headset com som surround e microfone removível.', fullDescription: 'Headset com som surround virtual 7.1 para uma experiência de áudio imersiva em jogos. Microfone removível com cancelamento de ruído e almofadas macias para conforto prolongado.' },
+                { id: 'peri-6', name: 'Microfone Condensador', price: 280.00, image: 'img/peri6.jpg', description: 'Microfone de estúdio para gravações de alta qualidade.', fullDescription: 'Microfone condensador USB, ideal para podcasting, streaming e gravação de voz. Capta áudio de alta qualidade com clareza e precisão. Inclui tripé e filtro pop.' },
+                { id: 'peri-7', name: 'Cadeira Gamer', price: 950.00, image: 'img/peri7.jpg', description: 'Cadeira ergonômica com ajustes de altura e inclinação.', fullDescription: 'Cadeira ergonômica com design gamer, revestida em couro sintético de alta qualidade. Possui apoio para os braços ajustável, almofadas para lombar e pescoço, e inclinação de até 180 graus.' },
+                { id: 'peri-8', name: 'Kit Teclado e Mouse', price: 180.00, image: 'img/peri8.jpg', description: 'Kit sem fio com teclado e mouse para uso diário.', fullDescription: 'Kit de teclado e mouse sem fio com conexão plug and play. O teclado é silencioso e o mouse possui sensor óptico preciso. Ideal para uso em escritório ou estudo.' },
+                { id: 'peri-9', name: 'Hub USB', price: 50.00, image: 'img/peri9.jpg', description: 'Hub USB com 4 portas de alta velocidade.', fullDescription: 'Hub USB 3.0 de 4 portas, expande a conectividade do seu computador. Permite conectar vários dispositivos USB, como pendrives, mouses e teclados, simultaneamente.' },
+                { id: 'peri-10', name: 'Base Refrigeradora', price: 110.00, image: 'img/peri10.jpg', description: 'Base para notebook com ventoinhas para resfriamento.', fullDescription: 'Base refrigeradora com duas ventoinhas de alta potência para manter seu notebook na temperatura ideal durante uso intenso. Possui design ergonômico e ajuste de altura.' }
+            ],
+        };
+        
+        const saveCart = (cart) => localStorage.setItem('cart', JSON.stringify(cart));
+        const getCart = () => JSON.parse(localStorage.getItem('cart')) || {};
+
+        const findProductById = (id) => {
+            for (const category in PRODUCTS) {
+                const product = PRODUCTS[category].find(p => p.id === id);
+                if (product) return product;
+            }
+            return null;
+        };
+
+        const updateCartCounter = () => {
+            const cart = getCart();
+            const counterElement = document.getElementById('cart-counter');
+            const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+            
+            counterElement.textContent = totalItems;
+            counterElement.style.display = totalItems > 0 ? 'flex' : 'none';
+        };
+
+        window.adicionarAoCarrinho = (itemId, itemName, itemPrice, quantity = 1) => {
+            const cart = getCart();
+            
+            if (cart[itemId]) {
+                cart[itemId].quantity += quantity;
+            } else {
+                const product = findProductById(itemId);
+                if (product) {
+                    cart[itemId] = { ...product, quantity: quantity };
+                } else {
+                    cart[itemId] = { id: itemId, name: itemName, price: itemPrice, quantity: quantity, image: 'img/placeholder.jpg' };
+                }
+            }
+            saveCart(cart);
+            alert(`"${itemName}" foi adicionado ao carrinho!`);
+            updateCartCounter();
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger-menu');
+            const sidebar = document.getElementById('sidebar');
+            const themeSwitch = document.getElementById('theme-switch');
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeSwitch.checked = true;
+            }
+
+            hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+            themeSwitch.addEventListener('change', () => {
+                if (themeSwitch.checked) {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+            
+            updateCartCounter();
+        });
+    </script>
+</body>
+</html>
