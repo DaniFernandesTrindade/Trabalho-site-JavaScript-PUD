@@ -1,500 +1,470 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TecnoPUD SINCE 2025 - Periféricos</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .product-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoPUD SINCE 2025 - Periféricos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
 
-    .product-card img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
 
-    .product-card h3 {
-      margin: 10px 0;
-    }
+        .product-card h3 {
+            margin: 10px 0;
+        }
 
-    .product-card .price {
-      font-weight: bold;
-      color: #b12704;
-      margin-bottom: 10px;
-    }
+        .product-card .price {
+            font-weight: bold;
+            color: #b12704;
+            margin-bottom: 10px;
+        }
 
-    .add-to-cart-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
-      flex-wrap: wrap;
-    }
+        .add-to-cart-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
 
-    .quantity-control {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-    }
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
 
-    .quantity-control button {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 30px;
-      height: 30px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
+        .quantity-control button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
 
-    .quantity-control button:hover {
-      background-color: #e0e0e0;
-    }
+        .quantity-control button:hover {
+            background-color: #e0e0e0;
+        }
 
-    .quantity-control .quantity {
-      font-size: 1.2em;
-      font-weight: bold;
-      min-width: 20px;
-      text-align: center;
-    }
+        .quantity-control .quantity {
+            font-size: 1.2em;
+            font-weight: bold;
+            min-width: 20px;
+            text-align: center;
+        }
 
-    .add-to-cart-container .add-to-cart-btn {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      white-space: nowrap;
-    }
+        .add-to-cart-container .add-to-cart-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+        }
 
-    .add-to-cart-container .add-to-cart-btn:hover {
-      background-color: #0056b3;
-    }
+        .add-to-cart-container .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
 
-    .details-btn {
-      margin-top: 10px;
-      background-color: #555;
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      display: inline-block;
-      transition: background-color 0.2s;
-    }
+        .details-btn {
+            margin-top: 10px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
 
-    .details-btn:hover {
-      background-color: #333;
-    }
+        .details-btn:hover {
+            background-color: #333;
+        }
 
-    .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #fff; /* Fundo branco por padrão */
-      color: #000; /* Texto preto por padrão */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    .logo-image {
-      height: 50px;
-    }
+        .logo-image {
+            height: 50px;
+        }
 
-    /* Regra para o Modo Escuro */
-    body.dark-mode .site-header {
-      background-color: #1a1a1a; /* Fundo escuro quando o modo escuro estiver ativo */
-      color: white; /* Texto branco */
-    }
+        body.dark-mode .site-header {
+            background-color: #1a1a1a;
+            color: white;
+        }
 
-    /* Estilo para as barras do menu hamburger, se necessário */
-    .hamburger-menu .bar {
-      background-color: #000; /* Barras pretas por padrão */
-    }
+        .hamburger-menu .bar {
+            background-color: #000;
+        }
 
-    body.dark-mode .hamburger-menu .bar {
-      background-color: white; /* Barras brancas no modo escuro */
-    }
-  </style>
+        body.dark-mode .hamburger-menu .bar {
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <a href="index.html" class="logo-link">
-      <img src="logo.jpeg" alt="Logo da loja TecnoPUD" class="logo-image">
+    <header class="site-header">
+        <a href="index.html" class="logo-link">
+            <img src="logo.jpeg" alt="Logo da loja TecnoPUD" class="logo-image">
+        </a>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="portateis.html">Portateis</a></li>
+                <li><a href="periferico.html">Periféricos</a></li>
+                <li><a href="audio.html">Áudio</a></li>
+                <li><a href="gamer.html">PC Gamer</a></li>
+                <li><a href="acessorios.html">Acessórios</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <span>Modo Escuro</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="category-section">
+            <h1>Periféricos</h1>
+            <div class="product-grid">
+
+                <div class="product-card" id="product-pendrive">
+                    <img src="pendrive.png" alt="Pendrive">
+                    <h3>Pendrive</h3>
+                    <p class="price">R$ 49,90</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('pendrive', -1)">-</button>
+                            <span id="quantity-pendrive" class="quantity">0</span>
+                            <button onclick="changeQuantity('pendrive', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('pendrive')">Adicionar</button>
+                    </div>
+                    <a href="pendrive.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-somfio">
+                    <img src="somfio.png" alt="Caixa de som com fio">
+                    <h3>Caixa de som com fio</h3>
+                    <p class="price">R$ 89,90</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('somfio', -1)">-</button>
+                            <span id="quantity-somfio" class="quantity">0</span>
+                            <button onclick="changeQuantity('somfio', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('somfio')">Adicionar</button>
+                    </div>
+                    <a href="somfio.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-fonefio1">
+                    <img src="fonefio1.png" alt="Fone com fio">
+                    <h3>Fone com fio</h3>
+                    <p class="price">R$ 79,90</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('fonefio1', -1)">-</button>
+                            <span id="quantity-fonefio1" class="quantity">0</span>
+                            <button onclick="changeQuantity('fonefio1', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('fonefio1')">Adicionar</button>
+                    </div>
+                    <a href="fonefio1.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-fonefio2">
+                    <img src="fonefio2.png" alt="Fone fio simples">
+                    <h3>Fone fio simples</h3>
+                    <p class="price">R$ 39,90</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('fonefio2', -1)">-</button>
+                            <span id="quantity-fonefio2" class="quantity">0</span>
+                            <button onclick="changeQuantity('fonefio2', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('fonefio2')">Adicionar</button>
+                    </div>
+                    <a href="fonefio2.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-headsetfio">
+                    <img src="headsetfio.png" alt="Headset">
+                    <h3>Headset</h3>
+                    <p class="price">R$ 150,00</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('headsetfio', -1)">-</button>
+                            <span id="quantity-headsetfio" class="quantity">0</span>
+                            <button onclick="changeQuantity('headsetfio', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('headsetfio')">Adicionar</button>
+                    </div>
+                    <a href="headsetfio.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-mousefio">
+                    <img src="mousefio.png" alt="Mouse">
+                    <h3>Mouse</h3>
+                    <p class="price">R$ 35,00</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('mousefio', -1)">-</button>
+                            <span id="quantity-mousefio" class="quantity">0</span>
+                            <button onclick="changeQuantity('mousefio', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('mousefio')">Adicionar</button>
+                    </div>
+                    <a href="mousefio.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-mousepad">
+                    <img src="mousepad.png" alt="Mousepad">
+                    <h3>Mousepad</h3>
+                    <p class="price">R$ 25,00</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('mousepad', -1)">-</button>
+                            <span id="quantity-mousepad" class="quantity">0</span>
+                            <button onclick="changeQuantity('mousepad', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('mousepad')">Adicionar</button>
+                    </div>
+                    <a href="mousepad.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-mousesem">
+                    <img src="mousesem.png" alt="Mouse sem fio">
+                    <h3>Mouse sem fio</h3>
+                    <p class="price">R$ 55,00</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('mousesem', -1)">-</button>
+                            <span id="quantity-mousesem" class="quantity">0</span>
+                            <button onclick="changeQuantity('mousesem', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('mousesem')">Adicionar</button>
+                    </div>
+                    <a href="mousesem.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-tecladodefio">
+                    <img src="tecladodefio.png" alt="Teclado de fio">
+                    <h3>Teclado de fio</h3>
+                    <p class="price">R$ 120,00</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('tecladodefio', -1)">-</button>
+                            <span id="quantity-tecladodefio" class="quantity">0</span>
+                            <button onclick="changeQuantity('tecladodefio', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('tecladodefio')">Adicionar</button>
+                    </div>
+                    <a href="tecladodefio.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-tecladosemfio">
+                    <img src="tecladosemfio.png" alt="Teclado sem fio">
+                    <h3>Teclado sem fio</h3>
+                    <p class="price">R$ 200,00</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('tecladosemfio', -1)">-</button>
+                            <span id="quantity-tecladosemfio" class="quantity">0</span>
+                            <button onclick="changeQuantity('tecladosemfio', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('tecladosemfio')">Adicionar</button>
+                    </div>
+                    <a href="tecladosemfio.html" class="details-btn">Ver detalhes</a>
+                </div>
+
+                <div class="product-card" id="product-webcam">
+                    <img src="web.png" alt="Webcam">
+                    <h3>Webcam</h3>
+                    <p class="price">R$ 180,00</p>
+                    <div class="add-to-cart-container">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity('webcam', -1)">-</button>
+                            <span id="quantity-webcam" class="quantity">0</span>
+                            <button onclick="changeQuantity('webcam', 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart('webcam')">Adicionar</button>
+                    </div>
+                    <a href="webcam.html" class="details-btn">Ver detalhes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="checkout.html" class="cart-floating">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-counter" class="cart-counter">0</span>
     </a>
-    <div class="hamburger-menu" id="hamburger-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-  </header>
-  </header>
 
-  <div class="sidebar" id="sidebar">
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="portateis.html">Notebooks</a></li>
-        <li><a href="perifericos.html">Periféricos</a></li>
-        <li><a href="audio.html">Áudio</a></li>
-        <li><a href="gamer.html">PC Gamer</a></li>
-        <li><a href="acessorios.html">Acessórios</a></li>
-      </ul>
-    </nav>
-    <div class="theme-toggle">
-      <span>Modo Escuro</span>
-      <label class="switch">
-        <input type="checkbox" id="theme-switch">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </div>
+    <footer>
+        <p>TECNOPUD SINCE 2025</p>
+    </footer>
 
-  <main class="main-content">
-    <section class="category-section">
-      <h1>e periferico</h1>
-      <div class="product-grid">
+    <script>
+        // Objeto com a lista completa de produtos
+        const PRODUCTS = {
+            'perifericos': [
+                { id: 'pendrive', name: 'Pendrive', price: 49.90, image: 'pendrive.png' },
+                { id: 'somfio', name: 'Caixa de som com fio', price: 89.90, image: 'somfio.png' },
+                { id: 'fonefio1', name: 'Fone com fio', price: 79.90, image: 'fonefio1.png' },
+                { id: 'fonefio2', name: 'Fone fio simples', price: 39.90, image: 'fonefio2.png' },
+                { id: 'headsetfio', name: 'Headset', price: 150.00, image: 'headsetfio.png' },
+                { id: 'mousefio', name: 'Mouse', price: 35.00, image: 'mousefio.png' },
+                { id: 'mousepad', name: 'Mousepad', price: 25.00, image: 'mousepad.png' },
+                { id: 'mousesem', name: 'Mouse sem fio', price: 55.00, image: 'mousesem.png' },
+                { id: 'tecladodefio', name: 'Teclado de fio', price: 120.00, image: 'tecladodefio.png' },
+                { id: 'tecladosemfio', name: 'Teclado sem fio', price: 200.00, image: 'tecladosemfio.png' },
+                { id: 'webcam', name: 'Webcam', price: 180.00, image: 'web.png' }
+            ],
+            // Outras categorias...
+            'portateis': [
+                { id: 'CelularCLTA1', name: 'Celular CLTA', price: 1299.90, image: 'celular02.png' },
+                { id: 'CelularPjA1', name: 'Celular Pj', price: 999.90, image: 'celular01.png' },
+                { id: 'Notebook10gA1', name: 'Notebook 10G', price: 2499.90, image: 'note01.png' },
+                { id: 'NotebookMaxA1', name: 'Notebook Max', price: 3199.90, image: 'note02.png' },
+                { id: 'Notebook1TB', name: 'Notebook 1TB', price: 4580.90, image: 'note04.png' }
+            ],
+            'audio': [
+                { id: 'FoneBTSlimA1', name: 'Fone BT Slim', price: 199.90, image: 'foneb.png' },
+                { id: 'SomBTA1', name: 'Som BT Slim', price: 450.00, image: 'som.png' }
+            ],
+            'acessorios': [
+                { id: 'MousepadA1', name: 'Mousse pad', price: 29.00, image: 'tablet.png' },
+                { id: 'PowerBankA1', name: 'Power Bank', price: 149.00, image: 'power.png' },
+                { id: 'tecladoSemFio1', name: 'Teclado sem fio', price: 450.00, image: 'img/tecladoSemFio1.png' }
+            ]
+        };
 
-        <div class="product-card" id="product-pendrive">
-          <img src="pendrive.png" alt="Pendrive">
-          <h3>Pendrive</h3>
-          <p class="price">R$ 49,90</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('pendrive', -1)">-</button>
-              <span id="quantity-pendrive" class="quantity">0</span>
-              <button onclick="changeQuantity('pendrive', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('pendrive')">Adicionar</button>
-          </div>
-          <a href="pendrive.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+        const saveCart = (cart) => localStorage.setItem('cart', JSON.stringify(cart));
+        const getCart = () => JSON.parse(localStorage.getItem('cart')) || {};
 
-        <div class="product-card" id="product-somfio">
-          <img src="somfio.png" alt="Caixa de som com fio">
-          <h3>Caixa de som com fio</h3>
-          <p class="price">R$ 89,90</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('somfio', -1)">-</button>
-              <span id="quantity-somfio" class="quantity">0</span>
-              <button onclick="changeQuantity('somfio', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('somfio')">Adicionar</button>
-          </div>
-          <a href="somfio.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+        const findProductById = (id) => {
+            for (const category in PRODUCTS) {
+                const product = PRODUCTS[category].find(p => p.id === id);
+                if (product) return product;
+            }
+            return null;
+        };
 
-        <div class="product-card" id="product-fonefio1">
-          <img src="fonefio1.png" alt="Fone com fio">
-          <h3>Fone com fio</h3>
-          <p class="price">R$ 79,90</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('fonefio1', -1)">-</button>
-              <span id="quantity-fonefio1" class="quantity">0</span>
-              <button onclick="changeQuantity('fonefio1', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('fonefio1')">Adicionar</button>
-          </div>
-          <a href="fonefio1.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+        const updateCartCounter = () => {
+            const cart = getCart();
+            const counterElement = document.getElementById('cart-counter');
+            const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
 
-        <div class="product-card" id="product-fonefio2">
-          <img src="fonefio2.png" alt="Fone fio simples">
-          <h3>Fone fio simples</h3>
-          <p class="price">R$ 39,90</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('fonefio2', -1)">-</button>
-              <span id="quantity-fonefio2" class="quantity">0</span>
-              <button onclick="changeQuantity('fonefio2', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('fonefio2')">Adicionar</button>
-          </div>
-          <a href="fonefio2.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+            counterElement.textContent = totalItems;
+            counterElement.style.display = totalItems > 0 ? 'flex' : 'none';
+        };
 
-        <div class="product-card" id="product-headsetfio">
-          <img src="headsetfio.png" alt="Headset">
-          <h3>Headset</h3>
-          <p class="price">R$ 150,00</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('headsetfio', -1)">-</button>
-              <span id="quantity-headsetfio" class="quantity">0</span>
-              <button onclick="changeQuantity('headsetfio', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('headsetfio')">Adicionar</button>
-          </div>
-          <a href="headsetfio.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+        window.changeQuantity = (itemId, change) => {
+            const quantityElement = document.getElementById(`quantity-${itemId}`);
+            const currentQuantity = parseInt(quantityElement.textContent);
+            let newQuantity = currentQuantity + change;
 
-        <div class="product-card" id="product-mousefio">
-          <img src="mousefio.png" alt="Mouse">
-          <h3>Mouse</h3>
-          <p class="price">R$ 35,00</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('mousefio', -1)">-</button>
-              <span id="quantity-mousefio" class="quantity">0</span>
-              <button onclick="changeQuantity('mousefio', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('mousefio')">Adicionar</button>
-          </div>
-          <a href="mousefio.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+            if (newQuantity < 0) {
+                newQuantity = 0;
+            }
 
-        <div class="product-card" id="product-mousepad">
-          <img src="mousepad.png" alt="Mousepad">
-          <h3>Mousepad</h3>
-          <p class="price">R$ 25,00</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('mousepad', -1)">-</button>
-              <span id="quantity-mousepad" class="quantity">0</span>
-              <button onclick="changeQuantity('mousepad', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('mousepad')">Adicionar</button>
-          </div>
-          <a href="mousepad.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+            quantityElement.textContent = newQuantity;
+        };
 
-        <div class="product-card" id="product-mousesem">
-          <img src="mousesem.png" alt="Mouse sem fio">
-          <h3>Mouse sem fio</h3>
-          <p class="price">R$ 55,00</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('mousesem', -1)">-</button>
-              <span id="quantity-mousesem" class="quantity">0</span>
-              <button onclick="changeQuantity('mousesem', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('mousesem')">Adicionar</button>
-          </div>
-          <a href="mousesem.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+        window.addToCart = (itemId) => {
+            const quantityElement = document.getElementById(`quantity-${itemId}`);
+            const quantity = parseInt(quantityElement.textContent);
 
-        <div class="product-card" id="product-tecladodefio">
-          <img src="tecladodefio.png" alt="Teclado de fio">
-          <h3>Teclado de fio</h3>
-          <p class="price">R$ 120,00</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('tecladodefio', -1)">-</button>
-              <span id="quantity-tecladodefio" class="quantity">0</span>
-              <button onclick="changeQuantity('tecladodefio', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('tecladodefio')">Adicionar</button>
-          </div>
-          <a href="tecladodefio.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+            if (quantity === 0) {
+                alert('Por favor, selecione a quantidade desejada.');
+                return;
+            }
 
-        <div class="product-card" id="product-tecladosemfio">
-          <img src="tecladosemfio.png" alt="Teclado sem fio">
-          <h3>Teclado sem fio</h3>
-          <p class="price">R$ 200,00</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('tecladosemfio', -1)">-</button>
-              <span id="quantity-tecladosemfio" class="quantity">0</span>
-              <button onclick="changeQuantity('tecladosemfio', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('tecladosemfio')">Adicionar</button>
-          </div>
-          <a href="tecladosemfio.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
+            const cart = getCart();
+            const product = findProductById(itemId);
 
-        <div class="product-card" id="product-webcam">
-          <img src="web.png" alt="Webcam">
-          <h3>Webcam</h3>
-          <p class="price">R$ 180,00</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('webcam', -1)">-</button>
-              <span id="quantity-webcam" class="quantity">0</span>
-              <button onclick="changeQuantity('webcam', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('webcam')">Adicionar</button>
-          </div>
-          <a href="webcam.html" class="details-btn" target="_blank">Ver detalhes</a>
-        </div>
-      </div>
-    </section>
-  </main>
+            if (product) {
+                if (cart[itemId]) {
+                    cart[itemId].quantity += quantity;
+                } else {
+                    cart[itemId] = { ...product, quantity: quantity };
+                }
+                saveCart(cart);
+                updateCartCounter();
+                alert(`${quantity} unidade(s) de "${product.name}" adicionada(s) ao carrinho!`);
 
-  <a href="checkout.html" class="cart-floating">
-    <span class="cart-icon">🛒</span>
-    <span id="cart-counter" class="cart-counter">0</span>
-  </a>
+                // Reinicia o seletor de quantidade para 0 após adicionar ao carrinho
+                quantityElement.textContent = 0;
+            } else {
+                alert('Produto não encontrado.');
+            }
+        };
 
-  <footer>
-    <p>TECNOPUD SINCE 2025</p>
-  </footer>
-  <script>
-    const PRODUCTS = {
-      'perifericos': [
-        { id: 'pendrive', name: 'Pendrive', price: 49.90, image: 'pendrive.png', description: 'Armazenamento portátil de alta velocidade.' },
-        { id: 'somfio', name: 'Caixa de som com fio', price: 89.90, image: 'somfio.png', description: 'Caixa de som para desktop com conexão via cabo.' },
-        { id: 'fonefio1', name: 'Fone com fio', price: 79.90, image: 'fonefio1.png', description: 'Fone de ouvido com áudio nítido e microfone integrado.' },
-        { id: 'fonefio2', name: 'Fone fio simples', price: 39.90, image: 'fonefio2.png', description: 'Fone de ouvido básico e leve para uso diário.' },
-        { id: 'headsetfio', name: 'Headset', price: 150.00, image: 'headsetfio.png', description: 'Headset com microfone ajustável, ideal para jogos e chamadas.' },
-        { id: 'mousefio', name: 'Mouse', price: 35.00, image: 'mousefio.png', description: 'Mouse ergonômico com fio, para maior precisão.' },
-        { id: 'mousepad', name: 'Mousepad', price: 25.00, image: 'mousepad.png', description: 'Mousepad com superfície lisa e antiderrapante.' },
-        { id: 'mousesem', name: 'Mouse sem fio', price: 55.00, image: 'mousesem.png', description: 'Mouse sem fio, prático e ideal para mobilidade.' },
-        { id: 'tecladodefio', name: 'Teclado de fio', price: 120.00, image: 'tecladodefio.png', description: 'Teclado com fio, robusto e responsivo.' },
-        { id: 'tecladosemfio', name: 'Teclado sem fio', price: 200.00, image: 'tecladosemfio.png', description: 'Teclado sem fio, para um setup mais limpo e organizado.' },
-        { id: 'webcam', name: 'Webcam', price: 180.00, image: 'web.png', description: 'Webcam de alta definição para videochamadas e streaming.' }
-      ],
-      'portateis': [
-        { id: 'CelularCLTA1', name: 'Celular CLTA', price: 1299.90, image: 'celular02.png', description: 'Smartphone compacto, ideal para o dia a dia' },
-        { id: 'CelularPjA1', name: 'Celular Pj', price: 999.90, image: 'celular01.png', description: 'Smartphone moderno com tela ampla e ótimo desempenho' },
-        { id: 'Notebook10gA1', name: 'Notebook 10G', price: 2499.90, image: 'note01.png', description: 'Notebook rápido, ideal para estudos e trabalho.' },
-        { id: 'NotebookMaxA1', name: 'Notebook Max', price: 3199.90, image: 'note02.png', description: 'Notebook de alto desempenho para multitarefas.' },
-        { id: 'Notebook1TB', name: 'Notebook 1TB', price: 4580.90, image: 'note04.png', description: 'Notebook com grande capacidade de armazenamento.' }
-      ],
-      'audio': [
-        { id: 'FoneBTSlimA1', name: 'Fone BT Slim', price: 199.90, image: 'foneb.png', description: 'Fone de ouvido Bluetooth' },
-        { id: 'SomBTA1', name: 'Som BT Slim', price: 450.00, image: 'som.png', description: 'Caixa de som Bluetooth portátil com som potente.' }
-      ],
-      'acessorios': [
-        { id: 'MousepadA1', name: 'Mousse pad', price: 29.00, image: 'tablet.png', description: 'Superfície para apoio do mouse, com precisão e conforto' },
-        { id: 'PowerBankA1', name: 'Power Bank', price: 149.00, image: 'power.png', description: 'Carregador portátil para manter seus dispositivos sempre ativos.' },
-        { id: 'tecladoSemFio1', name: 'Teclado sem fio', price: 450.00, image: 'img/tecladoSemFio1.png', description: 'Teclado compacto com conexão sem cabos.' }
-      ]
-    };
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger-menu');
+            const sidebar = document.getElementById('sidebar');
+            const themeSwitch = document.getElementById('theme-switch');
 
-    const saveCart = (cart) => localStorage.setItem('cart', JSON.stringify(cart));
-    const getCart = () => JSON.parse(localStorage.getItem('cart')) || {};
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeSwitch.checked = true;
+            }
 
-    const findProductById = (id) => {
-      for (const category in PRODUCTS) {
-        const product = PRODUCTS[category].find(p => p.id === id);
-        if (product) return product;
-      }
-      return null;
-    };
+            hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+            themeSwitch.addEventListener('change', () => {
+                if (themeSwitch.checked) {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
 
-    const updateCartCounter = () => {
-      const cart = getCart();
-      const counterElement = document.getElementById('cart-counter');
-      const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
-
-      counterElement.textContent = totalItems;
-      counterElement.style.display = totalItems > 0 ? 'flex' : 'none';
-    };
-
-    window.changeQuantity = (itemId, change) => {
-      const quantityElement = document.getElementById(`quantity-${itemId}`);
-      const currentQuantity = parseInt(quantityElement.textContent);
-      let newQuantity = currentQuantity + change;
-
-      if (newQuantity < 0) {
-        newQuantity = 0;
-      }
-
-      quantityElement.textContent = newQuantity;
-    };
-
-    window.addToCart = (itemId) => {
-      const quantityElement = document.getElementById(`quantity-${itemId}`);
-      const quantity = parseInt(quantityElement.textContent);
-
-      if (quantity === 0) {
-        alert('Por favor, selecione a quantidade desejada.');
-        return;
-      }
-
-      const cart = getCart();
-      const product = findProductById(itemId);
-
-      if (product) {
-        if (cart[itemId]) {
-          cart[itemId].quantity += quantity;
-        } else {
-          cart[itemId] = { ...product, quantity: quantity };
-        }
-        saveCart(cart);
-        updateCartCounter();
-        alert(`${quantity} unidade(s) de "${product.name}" adicionada(s) ao carrinho!`);
-
-        // Reinicia o seletor de quantidade para 0 após adicionar ao carrinho
-        quantityElement.textContent = 0;
-      } else {
-        alert('Produto não encontrado.');
-      }
-    };
-
-    const renderProducts = (category) => {
-      const productGrid = document.querySelector('.product-grid');
-      if (!productGrid) return;
-      productGrid.innerHTML = ''; // Limpa o grid antes de adicionar os novos produtos
-
-      const productsToRender = PRODUCTS[category] || [];
-      productsToRender.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card';
-        productCard.id = `product-${product.id}`;
-        productCard.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p class="price">R$ ${product.price.toFixed(2).replace('.', ',')}</p>
-          <div class="add-to-cart-container">
-            <div class="quantity-control">
-              <button onclick="changeQuantity('${product.id}', -1)">-</button>
-              <span id="quantity-${product.id}" class="quantity">0</span>
-              <button onclick="changeQuantity('${product.id}', 1)">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart('${product.id}')">Adicionar</button>
-          </div>
-          <a href="item.html?id=${product.id}" class="details-btn" target="_blank">Ver detalhes</a>
-        `;
-        productGrid.appendChild(productCard);
-      });
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.getElementById('hamburger-menu');
-      const sidebar = document.getElementById('sidebar');
-      const themeSwitch = document.getElementById('theme-switch');
-
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        themeSwitch.checked = true;
-      }
-
-      hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
-      themeSwitch.addEventListener('change', () => {
-        if (themeSwitch.checked) {
-          document.body.classList.add('dark-mode');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          document.body.classList.remove('dark-mode');
-          localStorage.setItem('theme', 'light');
-        }
-      });
-
-      renderProducts('perifericos');
-
-      updateCartCounter();
-    });
-  </script>
+            updateCartCounter();
+        });
+    </script>
 </body>
 </html>
