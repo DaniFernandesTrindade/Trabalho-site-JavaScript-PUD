@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fone com Fio - TecnoPUD LINK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand"><span class="logo-accent">Tecno</span>PUD <span class="link">LINK</span></div>
+        <a href="index.html" class="btn-ghost">🏠 Home</a>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+    <aside class="mobile-sidebar">
+        <a href="#" class="close-btn"><i class="fas fa-times"></i></a>
+        <nav>
+            <ul>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#" onclick="toggleTheme()"><span id="themeToggleText">Modo Escuro</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="item-details-main">
+        <section class="item-details-container">
+            <img src="fonefio1.png" alt="Fone com Fio" id="productImage" />
+            <div class="item-details-content">
+                <h1 id="productTitle">Fone com fio</h1>
+                <p class="price">R$ <span id="itemPrice">79.90</span></p>
+            </div>
+            <p class="description-text">
+                Ideal para o dia a dia, este fone de ouvido oferece áudio nítido e balanceado. Seu microfone integrado é perfeito para chamadas e reuniões online, combinando conforto e funcionalidade em um design leve.
+            </p>
+            <div class="quantity-add-container">
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                    <span id="quantityDisplay" class="quantity-display">1</span>
+                    <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('fonefio1')">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </main>
+    <a href="checkout.html" class="cart-floating">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-counter" id="cartCounter">0</span>
+    </a>
+    <footer class="site-footer">
+        <div class="footer-grid"></div>
+        <div class="copyright">TECNOPUD SINCE 2025</div>
+    </footer>
+    <script src="product-details.js"></script>
+</body>
+</html>
